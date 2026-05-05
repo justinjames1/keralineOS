@@ -3,17 +3,19 @@ org 0x7C00
 
 ;i hate evey fucking bit of this asm 
 
-    mov si, title    
-    mov ah, 0x0e       
+xor ax, ax
+mov ds, ax
 
 
-    lodsb              
+   mov si, title       
+    mov ah, 0x0e  
+
+.title_loop:        
+    lodsb         
     or al, al       
-    jz halt
-    int 0x10   
-    inc al
-    int 0x10 
-
+    jz .next          
+    int 0x10        
+    jmp .title_loop   
 
 
 
@@ -21,13 +23,13 @@ org 0x7C00
     mov ah, 0x0e       
 
 
-    lodsb              
+.select_loop:        
+    lodsb         
     or al, al       
-    jz halt
-    int 0x10   
-    inc al
-    int 0x10          
-
+    jz .next          
+    int 0x10        
+    jmp .select_loop 
+    
 
 
 halt:
