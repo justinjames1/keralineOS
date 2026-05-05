@@ -12,7 +12,7 @@ org 0x7C00
     jz halt
     int 0x10           
 
-title db "Kernaline os bootloader."
+
 
 
 
@@ -25,11 +25,14 @@ title db "Kernaline os bootloader."
     jz halt            
     int 0x10           
 
-select db "select a drive.."
+
 
 halt:
 hlt
 nohlt:
+
+select db "select a drive.."
+title db "Kernaline os bootloader."
 
 Times 510 db 0
 db 0x55, 0xaa 
