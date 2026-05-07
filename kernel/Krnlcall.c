@@ -7,9 +7,8 @@ return 0;}
 #define Krnlcall_H
 
 int memcall;
-void memcall(){memcall = 0;
-if (memcall == 1){
-int i = 1}}
+void memcall()
+{memcall();}
 
 int intterupt;
 void intterupt(){intterupt = 0;
