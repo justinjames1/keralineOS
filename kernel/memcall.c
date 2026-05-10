@@ -1,7 +1,7 @@
 #ifndef memcall_H  
 #define memcall_H
 int main(){
-int memval = 0; 
+int memval; 
 void memcall()
   {int memory[memval];}
 int pid = 0;
