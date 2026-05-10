@@ -9,8 +9,8 @@ int main(){
 int diskstat = 0; //write is defualt
 
 void memcall()
-{memcall();
-int memval;}
+{int memval = 0;
+memcall();}
 
 void intterupt(){
 int();}
