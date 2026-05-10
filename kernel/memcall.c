@@ -4,8 +4,7 @@ int main(){
 int memval = 0; 
 void memcall()
   {int memory[memval];}
-pid;
-pid = 0;
+int pid = 0;
 void pidcall(){
 pid ++; } // process adresess handling
 
