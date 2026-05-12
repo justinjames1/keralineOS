@@ -17,10 +17,7 @@ mov ds, ax
     int 0x10        
     jmp .title_loop   
 
-mov al, 0x0D
-int 0x10
-mov al, 0x0A
-int 0x10
+
 
 .next:
 
@@ -29,6 +26,10 @@ int 0x10
     mov si, select       
     mov ah, 0x0e       
 
+mov al, 0x0D
+int 0x10
+mov al, 0x0A
+int 0x10
 
 .select_loop:        
     lodsb         
