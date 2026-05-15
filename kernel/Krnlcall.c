@@ -13,7 +13,7 @@ void memcall()
 memcall();}
 
 void intterupt(){
-int();}
+intterupt();}
 
 int diskacess;
 void disk(){
