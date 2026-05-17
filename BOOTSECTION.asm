@@ -34,7 +34,7 @@ int 0x10
 .select_loop:        
     lodsb         
     or al, al       
-    jz .next1:         
+    jz .next1         
     int 0x10        
     jmp .select_loop 
     
