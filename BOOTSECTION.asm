@@ -34,18 +34,35 @@ int 0x10
 .select_loop:        
     lodsb         
     or al, al       
-    jz halt         
+    jz .next1:         
     int 0x10        
     jmp .select_loop 
     
+.next1:
 
+    mov si, line       
+    mov ah, 0x0e       
+
+mov al, 0x0D
+int 0x10
+mov al, 0x0A
+int 0x10
+
+.line_loop:        
+    lodsb         
+    or al, al       
+    jz halt         
+    int 0x10        
+    jmp .line_loop 
 
 halt:
 hlt
 nohlt:
-
-select db "select a drive..", 0
 title db "Kernaline os bootloader.", 0
+select db "select a drive..", 0
+line db "================", 0
+
+
 
 Times 510 db 0
 db 0x55, 0xaa 
