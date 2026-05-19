@@ -1,3 +1,5 @@
+
 apk add nasm
 apk add gcc
-cc Commandprompt.c -o cimmandprompt.bin
+nasm -f bin 
+cc Commandprompt.c -o Commandprompt.bin
