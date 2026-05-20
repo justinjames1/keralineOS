@@ -1,4 +1,6 @@
-
+echo =====================================
+echo starting kernaline os compilation....
+echo =====================================
 apk add nasm
 apk add gcc
 nasm -f bin BOOTSECTION.asm -o BOOTSECTION.bin
@@ -10,3 +12,6 @@ cc Memcall.c -o Memcall.bin
 cc Panic.c -o Panic.bin
 cc Process_scheduler.c -o Process_scheduler.bin
 nasm -f bin VGAcontrol.asm -o VGAcontrol.bin
+echo =====================================
+echo sucessfully compiled Kernaline os code.
+echo =====================================
