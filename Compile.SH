@@ -4,8 +4,13 @@ echo =====================================
 echo [warning if it says no directory]
 echo [extract the zip file if you got off the github]
 echo [take the files out of the kernaline os folder]
+apk add unzip
 apk add nasm
 apk add gcc
+unzip 
+mv Kernel/root /root/
+
+
 nasm -f bin BOOTSECTION.asm -o BOOTSECTION.bin
 cc Commandprompt.c -o Commandprompt.bin
 cc Diskmanage.c -o Diskmanage.bin
