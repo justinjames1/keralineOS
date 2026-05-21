@@ -1,3 +1,5 @@
 //add memcall logic
 #include "kernel/Memcall.h"
-void Memcall(){}
+void Memcall()
+{}
+// logic of mem.
