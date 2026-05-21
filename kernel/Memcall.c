@@ -1,5 +1,5 @@
-#ifndef memcall_H  
-#define memcall_H
+#ifndef Memcall_H  
+#define Memcall_H
 int memval; 
 void memcall()
   {int memory[memval];}
