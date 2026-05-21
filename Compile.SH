@@ -33,3 +33,6 @@ rm Krnlcall.c
 rm Memcall.c
 rm Panic.c
 rm Process_scheduler.c
+echo =====================================
+echo sucessfully completed installation.
+echo =====================================
