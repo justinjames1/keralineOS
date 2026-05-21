@@ -8,7 +8,7 @@ apk add nasm
 apk add gcc
 echo preparing files for compileing.....
 mv KERALINE-OS/* .
-mv Kernel/* .
+mv kernel/* .
 echo comepleted preping files for compilation.
 
 nasm -f bin BOOTSECTION.asm -o BOOTSECTION.bin
