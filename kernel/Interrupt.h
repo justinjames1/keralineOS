@@ -1,4 +1,4 @@
 #ifndef Intterupt_H  
 #define Intterupt_H
-void intterupt(void)
+void intterupt(void);
 #endif                
