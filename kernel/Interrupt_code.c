@@ -1,4 +1,4 @@
-#include "kernel/Interrupt.h"
+#include "Interrupt.h"
 int main(){
 void Interrupt()
 {}
