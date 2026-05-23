@@ -1,7 +1,7 @@
 
-#include "kernel/Interrupt.h"
-#include "kernel/Memcall.h"
-#include "kernel/Diskmanage.h"
+#include "Interrupt.h"
+#include "Memcall.h"
+#include "Diskmanage.h"
 int main(){
 
 int diskstat = 0; //write is defualt
