@@ -1,4 +1,4 @@
-#include "kernel/Memcall.h"
+#include "Memcall.h"
 int main(){
 int memval = 4096;
 memcall();
