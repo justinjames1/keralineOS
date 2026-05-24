@@ -20,4 +20,3 @@ diskwrite();}
 if (diskstat == 1){
 diskread();}
 }}
-}
