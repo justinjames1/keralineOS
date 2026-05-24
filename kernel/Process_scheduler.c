@@ -1,7 +1,7 @@
 #include "Memcall.h"
 int main(){
 int memval = 4096;
-memcall();
+Memcall();
 int pid = 0;
 void PID()
 {pid ++;}
