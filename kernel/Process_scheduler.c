@@ -9,5 +9,6 @@
 //{pid --;}
 //return 0;}
 
-
+int main()
+{} // so compile doesnt scream that theres no defined main.
 //compiler was being shit so i noted the code. it was a linker error btw.
