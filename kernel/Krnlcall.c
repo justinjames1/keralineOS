@@ -6,7 +6,7 @@ int main(){
 
 int diskstat = 0; //write is defualt
 
-void memcall()
+void krnlmemcall()
 {int memval = 0;
 Memcall();}
 
