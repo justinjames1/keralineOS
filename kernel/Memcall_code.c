@@ -1,7 +1,7 @@
 //add memcall logic
 #include "Memcall.h"
 int main(){
-int memval;
+int Memval = 4096;
 void Memcall()
 {}
 }
