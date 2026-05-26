@@ -128,7 +128,9 @@ int 0x10
 
 halt:
 hlt
-jmp HWASG 
+
+mov al, 5678 ;bootloader jmp confirmed.
+
 ;jump to kernel space code. demo.
 
 beta db "BETA BUILD. DO NOT SHARE IMAGES OF A BETA BUILD..", 0
