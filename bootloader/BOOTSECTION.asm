@@ -129,7 +129,7 @@ int 0x10
 halt:
 hlt
 
-mov al, 5678 ;bootloader jmp confirmed.
+mov al, 8 ;bootloader jmp confirmed.
 
 ;jump to kernel space code. demo.
 
