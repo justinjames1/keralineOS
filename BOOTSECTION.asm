@@ -127,7 +127,8 @@ int 0x10
 
 halt:
 hlt
-nohlt:
+jmp HWASG ;jump to kernel space code.
+
 beta db "BETA BUILD. DO NOT SHARE IMAGES OF A BETA BUILD..", 0
 title db "Kernaline os bootloader.", 0
 select db "select a drive..", 0
