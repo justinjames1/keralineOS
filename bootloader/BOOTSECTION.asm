@@ -121,9 +121,11 @@ int 0x10
 .driveC_loop:        
     lodsb         
     or al, al       
-    jz halt         
+    jz e
     int 0x10        
     jmp .driveC_loop 
+
+e:
 
 int 0x0e 
 mov al, 0x0D
@@ -158,7 +160,8 @@ mov Al, '#'
 int 0x10
 mov Al, ':'
 int 0x10
-NOENTER:
+NOENTER
+jmp halt
 ;e
 halt:
 hlt
