@@ -1,2 +1,2 @@
-#include "kernel/CPU/intterupt.h"
+#include "../kernel/CPU/Interrupt.h"
 int main(){}
