@@ -1,3 +1,4 @@
 fn main(){
-println!("ERROR HAS OCCURED");
+let error = "ERROR HAS OCCURED";
+println!("{}", error);
 }
