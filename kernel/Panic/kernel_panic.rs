@@ -1,3 +1,3 @@
 fn main(){
-println!("ERROR HAS OCCURED.");
+println!("ERROR HAS OCCURED");
 }
