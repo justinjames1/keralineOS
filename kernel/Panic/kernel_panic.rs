@@ -1,3 +1,4 @@
 fn main(){
-print!("Error");
+print!("KERNEL PANIC. ERRROR CODE [");
+  print!("Oxbeta");
 }
