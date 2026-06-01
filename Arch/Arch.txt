@@ -1,0 +1,1 @@
+the arch folder allows the kernel to get acess to diffrent types of cpus.
