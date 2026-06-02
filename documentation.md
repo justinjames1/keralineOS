@@ -1,4 +1,5 @@
-# keraline os
+# keraline os.
 keraline os is a custom os that i have been developing for days.
 
 its lightweight like under 10mb compared to other oses this is great.
+# file documentation.
