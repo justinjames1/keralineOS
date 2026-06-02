@@ -1,1 +1,2 @@
-redistrubution: ✅
+redistrubution: yes.
+vibe_coding: read VIBECODE_TOS.txt
