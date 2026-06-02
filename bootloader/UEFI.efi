@@ -1,1 +1,2 @@
-fn efi_main(){}
+int main(){
+}
