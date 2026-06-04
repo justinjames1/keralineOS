@@ -1,1 +1,6 @@
-we do not permit any use of ai here at keraline os.
+we perfer human made code in the keraline os source code.
+this is because ai brings in liability to the users of keraline os.
+ai is not perfect. it will make mistakes. 
+the liability of ai might make the os unstable.
+we rather not take the risk of ai generated code.
+and this is why we do not permit the use of ai code.
