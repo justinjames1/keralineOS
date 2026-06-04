@@ -1,1 +1,1 @@
-
+kell is keraline oses shell. basically linuxes shell for keraline os.
