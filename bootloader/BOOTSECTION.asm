@@ -230,7 +230,7 @@ mov dl, 129 ;specify we are reading from the C: drive
 int 0x13 ;disk controller interrupt
 D_ESC: ;determines if we use A drive
 
-
+cmp disk_data, 0xDF ;scan for kernel binary.
 
 
 beta db "BETA BUILD. DO NOT SHARE IMAGES OF A BETA BUILD..", 0
