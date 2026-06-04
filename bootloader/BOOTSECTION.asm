@@ -166,9 +166,72 @@ jmp halt
 halt:
 hlt
 
-mov al, 8 ;bootloader jmp confirmed.
 
-;jump to kernel space code. demo.
+
+disk_data: resb 512
+
+mov al, 1
+mov ah, 0
+cmp ah, al
+jz A_ESC
+mov ah, 2 ;tell bios we are reading from disk.
+mov ch, 1 ;the total ammount of sectors.
+mov cl, 8 ;cylinders
+mov dh, 4 ;header 1
+mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov dl, 0 ;specify we are reading from the C: drive
+int 0x13 ;disk controller interrupt
+A_ESC: ;determines if we use A drive.
+
+
+
+mov al, 1
+mov ah, 0
+cmp ah, al
+jz B_ESC
+mov ah, 2 ;tell bios we are reading from disk.
+mov ch, 1 ;the total ammount of sectors.
+mov cl, 8 ;cylinders
+mov dh, 4 ;header 1
+mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov dl, 1 ;specify we are reading from the C: drive
+int 0x13 ;disk controller interrupt
+B_ESC: ;determines if we use A drive.
+
+
+
+
+mov al, 1
+mov ah, 0
+cmp ah, al
+jz C_ESC
+mov ah, 2 ;tell bios we are reading from disk.
+mov ch, 1 ;the total ammount of sectors.
+mov cl, 8 ;cylinders
+mov dh, 4 ;header 1
+mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov dl, 0x80 ;specify we are reading from the C: drive
+int 0x13 ;disk controller interrupt
+C_ESC:
+
+;line 174 to 185 determines if we boot to the C drive.
+
+
+mov al, 1
+mov ah, 0
+cmp ah, al
+jz D_ESC
+mov ah, 2 ;tell bios we are reading from disk.
+mov ch, 1 ;the total ammount of sectors.
+mov cl, 8 ;cylinders
+mov dh, 4 ;header 1
+mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov dl, 129 ;specify we are reading from the C: drive
+int 0x13 ;disk controller interrupt
+D_ESC: ;determines if we use A drive
+
+
+
 
 beta db "BETA BUILD. DO NOT SHARE IMAGES OF A BETA BUILD..", 0
 title db "Kernaline os bootloader.", 0
