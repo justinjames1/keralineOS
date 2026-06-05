@@ -1,7 +1,12 @@
-
-org 0x7C00
-;16 bit 
-
+[org 0x7C00]
+[bits 16] 
+cli
+xor ax, ax
+mov ds, ax
+mov es, ax
+mov ss, ax
+mov sp, ax
+sti ; if you dont believe it, search in google how should a bootloader set segments
 ;i hate evey fucking bit of this asm 
 
     mov si, beta     
@@ -167,18 +172,16 @@ halt:
 hlt
 
 
-
-disk_data: resb 512
-
 mov al, 1
 mov ah, 0
 cmp ah, al
 jz A_ESC
 mov ah, 2 ;tell bios we are reading from disk.
-mov ch, 1 ;the total ammount of sectors.
-mov cl, 8 ;cylinders
-mov dh, 4 ;header 1
-mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov al, 1 ;the total ammount of sectors.
+mov ch, 1 ;cylinder
+mov cl, 2 ;sector
+mov dh, 0 ;head
+mov bx, 0x7e00 ;move data read from the disk into a unassigned variable or smth
 mov dl, 0 ;specify we are reading from the C: drive
 int 0x13 ;disk controller interrupt
 A_ESC: ;determines if we use A drive.
@@ -190,10 +193,11 @@ mov ah, 0
 cmp ah, al
 jz B_ESC
 mov ah, 2 ;tell bios we are reading from disk.
-mov ch, 1 ;the total ammount of sectors.
-mov cl, 8 ;cylinders
-mov dh, 4 ;header 1
-mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov al, 1 ;the total ammount of sectors.
+mov ch, 1 ;cylinder
+mov cl, 2 ;sector
+mov dh, 0 ;head
+mov bx, 0x7e00 ;move data read from the disk into a unassigned variable or smth
 mov dl, 1 ;specify we are reading from the C: drive
 int 0x13 ;disk controller interrupt
 B_ESC: ;determines if we use A drive.
@@ -206,10 +210,11 @@ mov ah, 0
 cmp ah, al
 jz C_ESC
 mov ah, 2 ;tell bios we are reading from disk.
-mov ch, 1 ;the total ammount of sectors.
-mov cl, 8 ;cylinders
-mov dh, 4 ;header 1
-mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov al, 1 ;the total ammount of sectors.
+mov ch, 1 ;cylinder
+mov cl, 2 ;sector
+mov dh, 0 ;head
+mov bx, 0x7e00 ;move data read from the disk into a unassigned variable or smth
 mov dl, 0x80 ;specify we are reading from the C: drive
 int 0x13 ;disk controller interrupt
 C_ESC:
@@ -222,15 +227,16 @@ mov ah, 0
 cmp ah, al
 jz D_ESC
 mov ah, 2 ;tell bios we are reading from disk.
-mov ch, 1 ;the total ammount of sectors.
-mov cl, 8 ;cylinders
-mov dh, 4 ;header 1
-mov es, disk_data ;move data read from the disk into a unassigned variable or smth
+mov al, 1 ;the total ammount of sectors.
+mov ch, 1 ;cylinder
+mov cl, 2 ;sector
+mov dh, 0 ;head
+mov bx, 0x7e00 ;move data read from the disk into a unassigned variable or smth
 mov dl, 129 ;specify we are reading from the C: drive
 int 0x13 ;disk controller interrupt
 D_ESC: ;determines if we use A drive
 
-cmp disk_data, 0xDF ;scan for kernel binary.
+cmp [es:0x7e00], 0xDF ;scan for kernel binary.
 
 
 beta db "BETA BUILD. DO NOT SHARE IMAGES OF A BETA BUILD..", 0
@@ -241,5 +247,5 @@ driveA db "drive A:", 0
 driveB db "drive B:", 0
 driveC db "drive C:", 0
 
-Times 510 db 0 ; how many times do i have to fix your errors? -Wasgyst | the compiler screamed because of this btw thats why. Also when we truncate it to 512 bytes. -justin | But when you truncate it to 512 bytes, in my computer the signature disappears -Wasgyst
+Times 510-($-$$) db 0 ; how many times do i have to fix your errors? -Wasgyst | the compiler screamed because of this btw thats why. Also when we truncate it to 512 bytes. -justin | But when you truncate it to 512 bytes, in my computer the signature disappears -Wasgyst
 db 0x55, 0xaa 
