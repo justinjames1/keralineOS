@@ -4,3 +4,4 @@ ai is not perfect. it will make mistakes.
 the liability of ai might make the os unstable.
 we rather not take the risk of ai generated code.
 and this is why we do not permit the use of ai code.
+"Anyways for those that only know basic assembly, please use documentations instead of ai to prevent mistakes made by ai!" -Wasgyst
