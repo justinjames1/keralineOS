@@ -165,7 +165,7 @@ mov Al, '#'
 int 0x10
 mov Al, ':'
 int 0x10
-NOENTER
+NOENTER:
 jmp halt
 ;e
 halt:
