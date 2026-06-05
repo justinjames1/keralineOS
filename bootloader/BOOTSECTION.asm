@@ -237,7 +237,7 @@ int 0x13 ;disk controller interrupt
 D_ESC: ;determines if we use A drive
 
 cmp [es:0x7e00], 0xDF ;scan for kernel binary.
-
+jmp 0x0000:0x7e00
 
 beta db "BETA BUILD. DO NOT SHARE IMAGES OF A BETA BUILD..", 0
 title db "Kernaline os bootloader.", 0
