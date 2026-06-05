@@ -241,5 +241,5 @@ driveA db "drive A:", 0
 driveB db "drive B:", 0
 driveC db "drive C:", 0
 
-Times 510 db 0 ; how many times do i have to fix your errors? -Wasgyst | the compiler screamed because of this btw thats why. Also when we truncate it to 512 bytes. -justin
+Times 510 db 0 ; how many times do i have to fix your errors? -Wasgyst | the compiler screamed because of this btw thats why. Also when we truncate it to 512 bytes. -justin | But when you truncate it to 512 bytes, in my computer the signature disappears
 db 0x55, 0xaa 
