@@ -9,7 +9,7 @@ CPU x86 architecture.
 firmware Bios.  
 boot_device floppy.  
 kernel type (monolithic)  
-kernel verison (v0.10)
+kernel verison (v1.12)
 # installation
 heres a step by step guide to
 compile the os code.
