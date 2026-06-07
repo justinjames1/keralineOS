@@ -1,6 +1,6 @@
 //keralineOS (2026) (distrubtion of this code is allowed.)
 #include "krnlcall.h" //so we can collect data from krnlcall.
-
+void panic(){}
 int main(){
  //get register values for diagonostics
 int rax_val = 0;
@@ -19,7 +19,11 @@ int rbp_val = 0;
 _asm_("mov [rbp_val], rbp");
 int rsp_val = 0;
 _asm_("mov [rsp_val], rsp");
-
+int panic_trigger;
 int error_code = 0x00000000;
+
+ 
+if (panic_trigger > 0)
+{panic();}
  
 }
