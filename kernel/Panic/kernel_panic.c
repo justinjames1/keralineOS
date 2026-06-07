@@ -20,6 +20,6 @@ _asm_("mov [rbp_val], rbp");
 int rsp_val = 0;
 _asm_("mov [rsp_val], rsp");
 
-
+int error_code = 0x00000000;
  
 }
