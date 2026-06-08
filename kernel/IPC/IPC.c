@@ -17,7 +17,7 @@ int total_shared_memory = (memory_base - memory_base2);
 int  inline_pointer_val = memory_base_val;
 int  *inline_pointer = &inline_pointer_val;
 
-if (inline_pointer_val == memory_base_val){inline_pointer_val--;}
+if (inline_pointer_val == memory_base_val){inline_pointer_val++;}
 if (inline_pointer_val == memory_base2_val){inline_pointer_val--;}
 
 void write(){}
