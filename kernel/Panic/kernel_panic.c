@@ -3,27 +3,25 @@
 void panic(){}
 int main(){
  //get register values for diagonostics
-int rax_val = 0;
-_asm_("mov [rax_val], rax");
-int rbx_val = 0;
-_asm_("mov [rbx_val], rbx");
-int rcx_val = 0;
-_asm_("mov [rcx_val], rcx"); 
-int rdx_val = 0;
-_asm_("mov [rdx_val], rdx");
-int rsi_val = 0;
-_asm_("mov [rsi_val], rsi");
-int rdi_val = 0;
-_asm_("mov [rdi_val], rdi");
-int rbp_val = 0;
-_asm_("mov [rbp_val], rbp");
-int rsp_val = 0;
-_asm_("mov [rsp_val], rsp");
-int panic_trigger;
-int error_code = 0x00000000;
 
- 
-if (panic_trigger > 0)
-{panic();}
+ void register_dunp(){
+unsigned int  rax_val = 0;
+_asm_("mov [rax_val], rax");
+unsigned int  rbx_val = 0;
+_asm_("mov [rbx_val], rbx");
+unsigned int  rcx_val = 0;
+_asm_("mov [rcx_val], rcx"); 
+unsigned int  rdx_val = 0;
+_asm_("mov [rdx_val], rdx");
+unsigned int  rsi_val = 0;
+_asm_("mov [rsi_val], rsi");
+unsigned int  rdi_val = 0;
+_asm_("mov [rdi_val], rdi");
+unsigned int  rbp_val = 0;
+_asm_("mov [rbp_val], rbp");
+unsigned int  rsp_val = 0;
+_asm_("mov [rsp_val], rsp");
+ }
+
  
 }
