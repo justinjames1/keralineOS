@@ -1,27 +1,15 @@
 //keralineOS (2026) (distrubtion of this code is allowed.)
-#include "krnlcall.h" //so we can collect data from krnlcall.
-void panic(){}
+#include "kernel/Krnlcall/krnlcall.h" //so we can collect data from krnlcall.
+#include "kernel/IPC/IPC.h" // collect data from ipc 
 int main(){
- //get register values for diagonostics
 
- void register_dunp(){
-unsigned int  rax_val = 0;
-_asm_("mov [rax_val], rax");
-unsigned int  rbx_val = 0;
-_asm_("mov [rbx_val], rbx");
-unsigned int  rcx_val = 0;
-_asm_("mov [rcx_val], rcx"); 
-unsigned int  rdx_val = 0;
-_asm_("mov [rdx_val], rdx");
-unsigned int  rsi_val = 0;
-_asm_("mov [rsi_val], rsi");
-unsigned int  rdi_val = 0;
-_asm_("mov [rdi_val], rdi");
-unsigned int  rbp_val = 0;
-_asm_("mov [rbp_val], rbp");
-unsigned int  rsp_val = 0;
-_asm_("mov [rsp_val], rsp");
- }
-
+unsigned int error_code;
+void shared_overflow_error_code()
+{error_code = 0x00000001} //memory region fault. 
+ void shared_overflow(){
+if (panic_trigger == 1)
+{shared_overflow_error_code();} 
+}
+shared_overflow();
  
 }
