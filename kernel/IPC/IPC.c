@@ -2,23 +2,17 @@
 #include "IPC.h"
 int main()
 {
-
-int read_data = 0;
-  
-int write_data = 0;
-  
-int interrupt = 0;
-  
-int processes = 0;
-
-int current_process = 0;
-
-int process1_base1 = 0;
-
-int process2_base2 = 0;
+//int adress = 0;
+//int read_data = 0;
+//int write_data = 0;
+//int interrupt = 0;
+//int processes = 0;
+//int current_process = 0;
+//int process1_base1 = 0;
+//int process2_base2 = 0;
   
 int base_1 = process1_base1;
-int base_2 = process2_base2;
+int base_2 = process2_base2; //define shared regions between processes
 
 int memory_base_val = base_1;
 int *memory_base = &memory_base_val; 
@@ -33,6 +27,13 @@ int  *inline_pointer = &inline_pointer_val;
 
 if (inline_pointer_val == memory_base_val){inline_pointer_val++;}
 if (inline_pointer_val == memory_base2_val){inline_pointer_val--;}
+
+if (inline_pointer_val < memory_base_val){panic_trigger = 1;}
+else {panic_trigger = 0;}
+if (inline_pointer_val > memory_base2_val){panic_trigger = 1}
+else {panic_trigger = 0;}
+  
+  //prevent the shared region pointer from going beyond the region.
 
 void multi_ipc(){
 while(processes > current_process)
