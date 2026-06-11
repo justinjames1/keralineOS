@@ -1,4 +1,4 @@
-#ifndef Intterupt_H  
-#define Intterupt_H
+#ifndef Intterupt_h
+#define Intterupt_h
 void interrupt(void);
 #endif                
