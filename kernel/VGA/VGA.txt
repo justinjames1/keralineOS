@@ -1,0 +1,1 @@
+vga is how the kernel uses the display.
