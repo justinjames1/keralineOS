@@ -1,5 +1,5 @@
-#ifndef krnlcall_H_   /* Include guard */
-#define krnlcall_H_
+#ifndef krnlcall_h   /* Include guard */
+#define krnlcall_h
 
 extern unsigned int int_type; //define intterupts
   
