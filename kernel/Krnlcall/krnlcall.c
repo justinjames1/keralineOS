@@ -1,4 +1,4 @@
-#include "krnlcall.h"
+#include "kernel/Krnlcall/krnlcall.h"
 #include "krnlcall_disk.h"
 int main()
 {
