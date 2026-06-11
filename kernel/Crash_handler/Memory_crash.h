@@ -1,5 +1,5 @@
-#ifndef Memory_crash.h_H_   /* Include guard */
-#define Memory_crash.h_H_
+#ifndef Memory_crash_h  /* Include guard */
+#define Memory_crash_h
 
 
 
