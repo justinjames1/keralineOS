@@ -1,5 +1,5 @@
-#ifndef krnlcall_disk_H_   /* Include guard */
-#define krnlcall_disk_H_
+#ifndef krnlcall_disk_h   /* Include guard */
+#define krnlcall_disk_h
 
 
 
