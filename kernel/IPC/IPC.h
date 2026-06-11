@@ -1,5 +1,5 @@
-#ifndef IPC_H_   /* Include guard */
-#define IPC_H_
+#ifndef IPC_h   /* Include guard */
+#define IPC_h
 
 
 extern panic_trigger;
