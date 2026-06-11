@@ -1,5 +1,5 @@
-#ifndef kernel_panic_handler_H_   /* Include guard */
-#define kernel_panic_handler_H_
+#ifndef kernel_panic_handler_h   /* Include guard */
+#define kernel_panic_handler_h
 
 void kernel_panic();
 
