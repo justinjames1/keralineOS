@@ -9,10 +9,6 @@ int *height;
 int *weight;
 };
 struct framebufferdata framebufferdata;
-
-framebufferdata.GpuMemoryAddress = &*GpuMemoryaddress;
-framebufferdata.*FrameBufferMemoryArray[] = &GpuVramSize; //I FUCKING HATE THIS STUPID FUCKING OS CODING ALL OF THIS IS A FUCKING PAIN GOD WHY
-  
-
-  
+framebufferdata.GpuMemoryAddress = &GpuData.*GpuMemoryaddress;
+framebufferdata.*FrameBufferMemoryArray[] = &GpuData.GpuVramSize; //I FUCKING HATE THIS STUPID FUCKING OS CODING ALL OF THIS IS A FUCKING PAIN GOD WHY
 }
