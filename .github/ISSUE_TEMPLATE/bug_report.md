@@ -1,9 +1,9 @@
-
+---
 name: Bug report
 about: report a issue for our team to fix.
 title: 'bug report template.'
 labels: bug
-
+---
 
 
 Before you submit an issue read the rules section first.
