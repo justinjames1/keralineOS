@@ -1,8 +1,14 @@
 //add memcall logic
 #include "kernel/Memory/Memcall.h"
 int main(){
-int Memval = 4096;
-void Memcall(void)
-{}
+unsigned int ramLimit;
+int RamRead(int){}
+int RamWrite(int){}
+
+
+
+
+
+  
 }
 // logic of mem.
