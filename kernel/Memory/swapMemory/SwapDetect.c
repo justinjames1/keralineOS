@@ -1,2 +1,4 @@
 #include "kernel/Memory/swapMemory/swapDetect.h"
-int main(){}
+int main(){\
+SwapTrigger = 0;
+}
