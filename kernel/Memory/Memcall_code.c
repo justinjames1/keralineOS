@@ -2,8 +2,10 @@
 #include "kernel/Memory/Memcall.h"
 int main(){
 unsigned int ramLimit;
-int RamRead(int){}
-int RamWrite(int){}
+
+int Memcall(int){};
+int RamRead(int){Memcall(int);}
+int RamWrite(int){Memcall(int);}
 
 
 
