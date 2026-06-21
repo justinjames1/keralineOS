@@ -15,7 +15,16 @@ heres a step by step guide to
 compile the os code.
 First install the Installer
 with git.
+
 The code for the installer is 
+
 git clone https://github.com/justinjames1/Kerinstall.git
+
 then do mv Kerinstall/Kerinstall.sh /root/
+
 then do sh Kerinstall.sh
+# contributors
+If you are planning to be a contributor\maintainer to keraline os, read the below text.
+
+if you are testing a update/release for keraline os, we recommend using QEMU.
+
