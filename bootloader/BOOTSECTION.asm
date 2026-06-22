@@ -6,7 +6,7 @@ mov ds, ax
 mov es, ax
 mov ss, ax
 mov sp, ax
-sti ; if you dont believe it, search in google how should a bootloader set segments
+sti ; if you dont believe it, search in google how should a bootloader set segments | the fuh bro communicating about. -justin
 ;i hate evey fucking bit of this asm 
 
     mov si, beta     
