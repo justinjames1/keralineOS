@@ -8,7 +8,7 @@ struct ram_struct {
 unsigned ram_base;
 unsigned ram_roof;
 }; struct ram_struct ram_struct;
-
+void ProcAllocate(){
 if (RamBase < ProgramRegionStart){RamBase++;}
 
 ram_struct.ram_base = RamBase;
@@ -22,6 +22,5 @@ int ProgramSize = (ProgramRegion);
 void Allocate_Process(){
 int allocate[ProgramSize];
 }
-
-
-}
+ }
+   }
