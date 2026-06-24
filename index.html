@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keraline OS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, Arial;
+      background: #0b0f19;
+      color: #e6e6e6;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1a1f2e, #0b0f19);
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .tag {
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    code {
+      background: #0f172a;
+      padding: 3px 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Keraline OS</h1>
+  <div class="tag">lightweight. BIOS-native. built different (literally).</div>
+
+  <div style="margin-top:20px;">
+    <a class="btn" href="#download">Download</a>
+    <a class="btn" href="https://github.com/justinjames1/keralineOS">GitHub</a>
+    <a class="btn" href="#docs">Docs</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="card">
+    Keraline OS is a custom-built operating system focused on low-level control, speed,
+    and “why does this actually boot” energy.
+    <br/><br/>
+    Runs on BIOS systems. No bloat. No drama. Just raw kernel chaos.
+  </div>
+</section>
+
+<section id="download">
+  <h2>Downloads</h2>
+
+  <div class="card">
+    <h3>Latest Build</h3>
+    <p>Version: <code>v0.0.5-alpha</code></p>
+    <a class="btn" href="#">Download ISO</a>
+    <a class="btn" href="#">Download Boot Image</a>
+  </div>
+
+  <div class="card">
+    <h3>Source Code</h3>
+    <p>Because yes, it’s open source. obviously.</p>
+    <a class="btn" href="https://github.com/justinjames1/keralineOS">View Repository</a>
+  </div>
+</section>
+
+<section id="docs">
+  <h2>Docs</h2>
+  <div class="card">
+    <p>
+      Boot process ? <code>BOOTSECTION.asm</code><br/>
+      Kernel ? <code>krnlcalls / mem / interrupt handlers</code><br/>
+      Drivers ? “pain and suffering but C”
+    </p>
+  </div>
+</section>
+
+<footer>
+  Keraline OS • built by someone who definitely chose violence against modern OS design
+</footer>
+
+</body>
+</html>
