@@ -3,6 +3,8 @@ This is a note from Wasgyst, Justinjames might make errors on the code so please
 
 no you do not have to use i386 and am386. as long as if its x86_64 it will work. -justin
 
+btw ik that alot of the code is unfinished. Thats because its very hard working on a os. I understand most of the hate of the os is coming from unfinished code/empty int main(){}'s, But its because the development of Keraline os is very tiring. Espically the fact that wasgyst doesnt do jack shit, theres atleast 50 files that require complex c,asm code. So its very hard for the team, Possibly 500 lines of complex code, we have been working months. geniune months on keraline os. We hope you understand how the developers are overworked with alot of complex code, espically reading them. -justin
+
 # system requirements
 CPU BRAND Intel, Amd.  
 CPU x86 architecture.  
