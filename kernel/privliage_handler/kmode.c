@@ -1,5 +1,5 @@
 int main(){
-  void dmode(){
+  void kmode(){
 
   }
 }
