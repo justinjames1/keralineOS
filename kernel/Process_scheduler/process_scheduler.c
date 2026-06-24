@@ -1,21 +1,27 @@
-int main()
-{
-int process_name = 0;
-int pid = 20;
-int processes = 50;
-int current = 0;
-int process_piroity = 1;
+int main(){
 
-process_name = pid;
-
-void process_piroity_create(){
-if (current < processes)
-{process_piroity_create();}
-current++;
-
-process_name = process_piroity;
-process_piroity++; //process piroity feature isnt expected to work ima fix it later
+int Cores = 18;
+unsigned int CoresUsed;
+unsigned int AssignCore = 0;
+unsigned int process_pid;
+while (CoresUsed > Cores){ //thread scheduling. [used when theres more processes exist then cores.]
+Cores - CoresUsed;
+if (AssignCore == Cores){AssignCore--;} 
+void assign(){
+CoresUsed++;
 }
-process_piroity_create();
+assign();
+}
+while (CoresUsed < Cores){ //assign scheduling. [used when less processes exist then cores.]
+Cores - CoresUsed;
+if (AssignCore == Cores){AssignCore--;}
+void assign(){
+CoresUsed++;
+}
+assign();
+}
+void UnassignCore(){Cores++; CoresUsed++;}
+
+
 
 }
