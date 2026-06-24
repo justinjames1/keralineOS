@@ -37,7 +37,7 @@ else {interrupt = 0;}
 }
 multi_ipc();
 
-
+char ALLOCATE[total_shared_memory];
   
 void write(){
 interrupt = 1; //interrupt to write.
