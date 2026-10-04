@@ -4,9 +4,8 @@
 #include "kernel/IPC/IPC.h" // collect data from ipc 
 int main(){
 int *error_code = int(*)0x0000;//i used pointer so we can use a hexademical based error code.
-
 if((int*)error_code==int(*)0x0001){
-
+char error = (int*)error_code;
 
 
 }
